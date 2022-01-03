@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+
+  <body>
+  <div class="heaing">
+    <h1>
+      Simple Interest Calculator
+    </h1>
+  </div>
+  <div class="date">
+    <h2>Date:</h2>
+    <p id="demo"></p>
+    
+    <script>
+      var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1;
+  var yyyy = today.getFullYear();
+  if(dd<10)
+  {
+      dd='0'+dd;
+  }
+
+  if(mm<10)
+  {
+      mm='0'+mm;
+  }
+  today = dd+'-'+mm+'-'+yyyy;
+  document.getElementById("demo").innerHTML=today;
+    </script>
+    <h2>Simple Interest : </h2>
+    <p style="background-color: #35589A; color: cornsilk; font-size: 30px; border-radius:10px ; padding-left: 10px; padding-top: 10px;padding-bottom: 10px;" id="demo2">0</p>
+    <h2>Total Amount : </h2>
+    <p style="background-color: #35589A; color: cornsilk; font-size: 30px; border-radius:10px ; padding-left: 10px; padding-top: 10px;padding-bottom: 10px; " id="total">0</p>
+  </div>
+
+<div class="container">
+  <div class="principle">
+    <h2>Principle Amount</h2>
+    <input type="number" id="principleAmount" name="principleAmount" required value="p" placeholder="Enter Principle amount" ><br>
+    <h2>Rate of Interest</h2>
+    <input type="number" id="rate" name="rate" value="r" required placeholder="Interest per month"><br>
+
+    <h2>Duration(in months):</h2>
+    <input type="number" id="months" name="months" value="t"  placeholder="Number of months">
+    <div class="or">
+      <h3>or</h3>
+    </div>
+
+    <h2>Amount borrowed on :</h2>
+    <input id="demo3"  type="date" name="date" ><br>
+    <p id="demo4"></p>
+    
+    <button type="button" class="button"  onclick="myFunction()">Calculate</button>
+
+    
+    <!-- <h2 id="op"></h2> -->
+    <script>
+      function myFunction() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("principleAmount").value;
+  let y = document.getElementById("rate").value;
+  let z = document.getElementById("months").value;
+  let selectedDate=document.getElementById("demo3").value;
+  let interestcal ;
+  interestcal=(x*y*z)/100;
+  // document.getElementById("demo4").innerHTML=getDate();
+  let totalPaid ;
+  totalPaid=parseInt(x)+interestcal;
+  document.getElementById("demo2").innerHTML=interestcal;
+  document.getElementById("total").innerHTML=totalPaid;
+
+          // function forint(p,t,r){
+          //   return (p*t*r)/100
+          }
+    </script>
+  </div>
+</div>
+  </body>
+</html>
