@@ -15,13 +15,13 @@ br{
   padding-bottom: 20px;
   border: 3px solid black;
   border-radius: 10px;
-  margin-left:500px;
-  margin-right: 500px;
-
+  margin-left: 20% ;
+  margin-right: 30%;
 }
 .or{
   text-align: center;
   padding-top: -5px;
+
 }
 input[type=number],date {
   width: 80%;
@@ -35,7 +35,7 @@ input[type=number],date {
 .date{
   float: right;
   font-size: 20px;
-margin-right: 200px;
+margin-right: 10%;
 }
 .button {
   background: #3498db;
@@ -61,4 +61,10 @@ margin-right: 200px;
   cursor: pointer;
 
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+footer {
+  
+  padding: 10px;
+  text-align: center;
+  color: rgb(12, 11, 11);
 }
