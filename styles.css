@@ -35,7 +35,7 @@ input[type=number],date {
 .date{
   float: right;
   font-size: 20px;
-margin-right: 10%;
+margin-right: 5%;
 }
 .button {
   background: #3498db;
